@@ -10,9 +10,7 @@ import random
 
 
 LINUX_USER = getpass.getuser()
-HOME_DIRECTORY = "/home/cyc"
-if LINUX_USER == "root":
-    HOME_DIRECTORY = "/root"
+HOME_DIRECTORY = os.environ["HOME"]
 LOG_FILE_LOCATION = os.path.join(HOME_DIRECTORY,".MY_SCREEN.log")
 CMD_TO_RUN_FILE_LOCATION = os.path.join(HOME_DIRECTORY,".CMD_TO_RUN.sud")
 CMD_GET_ALL_SCREENS = "screen -ls"
